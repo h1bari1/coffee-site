@@ -4,53 +4,58 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: "Open Sans", sans-serif;
     border:none;
     outline: none;
 }
 
-/* .list-item:nth-child(odd){
-    background: #FF4B32;
+/*
+    static - default
+    fixed - фіксоване позиціонування
+    sticky - прилипаюче позиціонування
+    absolute - абсолютне позиціонування
+    relative - відносне позиціонування
+*/
+
+.up-btn{
+    width: 70px;
+    height: 70px;
+    background: #2fbb81;
+    border-radius: 50%;
+    position: fixed;
+    top:  20px;
+
+    transition: 2s;
+    z-index: 200;
 }
-.list-item:nth-child(even){
-    background: lightgreen;
-    font-weight: 700;
-    font-style: italic;
-} */
-
-/* .list-item:last-child{
-    text-align: center;
+.secret-block{
+    width: 95%;
+    height: 100px;
+    margin: 0 auto;
+    background: rgba(111,11,129,0.6);
+    position: sticky;
+    top: 0;
+    border-radius: 0 0 10px 10px;
+    z-index: 99999;
 }
-.list-item:first-child{
-    text-align: right;
-} */
-
-/* .list-item:not(:first-child){
-    text-align: center;
-    color: red;
-} */
-
-/* .list-item:not(.active){
-    text-align: center;
-    color: red;
-} */
-
-/* .list-item:nth-child(2n){
-    color: red;
-} */
-/* .list-item::first-letter{
-    font-size: 50px;
-} */
-
-.desc{
-    width: 404px;
-    height: 404px;
-    border: 2px double black;
-    display: flex;
-    flex-wrap: wrap;
+.absolute-block{
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    inset: 0;
+    /* margin: auto; */
+    /* left: 0;
+    bottom: 0;
+    top:0;
+    right: 0; */
+    z-index: 100;
+    left: 50px;
+    top: 40px;
 }
-.square{
-    width: 50px;
-    height: 50px;
-    background: #000;
+.relative-block{
+    width: 400px;
+    height: 400px;
+    background: lightskyblue;
+    position: relative;
+    z-index: 100;
 }
